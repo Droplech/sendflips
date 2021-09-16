@@ -47,7 +47,7 @@ $(document).ready(function(){
             counter++
             counter = counter == tabs.length ? 0 : counter;
             changeTabs()
-        }, 3000)
+        }, 5000)
     }
 
     changeTabs()
@@ -61,6 +61,66 @@ $(document).ready(function(){
         $('.modal_bg_color').fadeOut()
         $('.modal_video').fadeOut()
     })
+
+
+    $('.tabs_link').click(function(e){
+        e.preventDefault()
+        $('.tabs_link').removeClass('active-link')
+        $(this).addClass('active-link')
+        $('.tabs_content').removeClass('tabs_content-active')
+        $( $(this).attr('data-tab') ).addClass('tabs_content-active')
+        
+    })
+
+    $('.ready_linkTab').click(function(e){
+        e.preventDefault()
+        $('.ready_linkTab').removeClass('active-readyLink')
+        $(this).addClass('active-readyLink')
+        $('.ready_tabs_content').removeClass('tabs_content-active')
+        $( $(this).attr('data-tab') ).addClass('tabs_content-active')
+        
+    })
+
+    new Swiper('.solutions_slider',{
+        slidesPerView: 2.2,
+        spaceBetween: 20,
+        
+        navigation: {
+            nextEl: '#solutions_next',
+            prevEl: '#solutions_prev',
+        },
+        breakpoints: {
+            1680:{
+                slidesPerView: 2.5,
+            },
+            1920:{
+                slidesPerView: 2.9,
+            }
+        }
+        // loop: true,
+    })
+
+    new Swiper('.feedback_slider',{
+        slidesPerView: 2,
+        spaceBetween: 20,
+        centeredSlides: true,
+        breakpoints: {
+            1440:{
+                slidesPerView: 2.4,
+            },
+            1680:{
+                slidesPerView: 2.7,
+            },
+            1920:{
+                slidesPerView: 3.2,
+            }
+        },
+        autoplay: {
+            delay: 5000,
+        },
+        loop: true,
+    })
+
 
     
 })
