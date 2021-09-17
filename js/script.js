@@ -31,6 +31,31 @@ $(document).ready(function(){
 
 
 
+
+    let heightItem = [...document.querySelectorAll('.info_block')];
+
+    heightItem.forEach(item => {
+        let textWrapper = item.querySelector('.txt');
+        let height = textWrapper.clientHeight;
+        let translate = -height + item.clientHeight - parseInt(getComputedStyle(item).paddingTop)
+
+        console.log(translate)
+
+        gsap.to(textWrapper, {
+            y: translate,
+            scrollTrigger: {
+                start: "top top",
+                trigger: item,
+                end: () => '+=' + height,
+                scrub: true,
+                pin: true,
+            },
+        });
+    })
+   
+
+
+
     const tabs = document.querySelectorAll('.video_txt_wrapper');
     let counter = 1;
     let t;
@@ -67,8 +92,11 @@ $(document).ready(function(){
         e.preventDefault()
         $('.tabs_link').removeClass('active-link')
         $(this).addClass('active-link')
-        $('.tabs_content').removeClass('tabs_content-active')
-        $( $(this).attr('data-tab') ).addClass('tabs_content-active')
+        $('.tabs_content').fadeOut()
+        setTimeout(() => {
+            $( $(this).attr('data-tab') ).fadeIn()
+        }, 300);
+        
         
     })
 
@@ -76,8 +104,11 @@ $(document).ready(function(){
         e.preventDefault()
         $('.ready_linkTab').removeClass('active-readyLink')
         $(this).addClass('active-readyLink')
-        $('.ready_tabs_content').removeClass('tabs_content-active')
-        $( $(this).attr('data-tab') ).addClass('tabs_content-active')
+        $('.ready_tabs_content').fadeOut()
+
+        setTimeout(() => {
+            $( $(this).attr('data-tab') ).fadeIn()
+        }, 300);
         
     })
 
@@ -120,6 +151,13 @@ $(document).ready(function(){
         },
         loop: true,
     })
+
+
+   
+
+    
+    
+
 
 
     
