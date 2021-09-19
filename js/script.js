@@ -32,27 +32,30 @@ $(document).ready(function(){
 
 
 
-    let heightItem = [...document.querySelectorAll('.info_block')];
+    
+    
+    if(screen.width > 1200){
+        let heightItem = [...document.querySelectorAll('.info_block')];
 
-    heightItem.forEach(item => {
-        let textWrapper = item.querySelector('.txt');
-        let height = textWrapper.clientHeight;
-        let translate = -height + item.clientHeight - parseInt(getComputedStyle(item).paddingTop)
+        heightItem.forEach(item => {
+            let textWrapper = item.querySelector('.txt');
+            let height = textWrapper.clientHeight;
+            let translate = -height + item.clientHeight - parseInt(getComputedStyle(item).paddingTop)
 
-        console.log(translate)
+            console.log(translate)
 
-        gsap.to(textWrapper, {
-            y: translate,
-            scrollTrigger: {
-                start: "top top",
-                trigger: item,
-                end: () => '+=' + height,
-                scrub: true,
-                pin: true,
-            },
-        });
-    })
-   
+            gsap.to(textWrapper, {
+                y: translate,
+                scrollTrigger: {
+                    start: "top top",
+                    trigger: item,
+                    end: () => '+=' + height,
+                    scrub: true,
+                    pin: true,
+                },
+            });
+        })
+    }
 
 
 
@@ -76,6 +79,7 @@ $(document).ready(function(){
     }
 
     changeTabs()
+    
     
 
     $('.video_play').click(function(){
@@ -113,7 +117,7 @@ $(document).ready(function(){
     })
 
     new Swiper('.solutions_slider',{
-        slidesPerView: 2.2,
+        slidesPerView: 1.2,
         spaceBetween: 20,
         
         navigation: {
@@ -121,6 +125,12 @@ $(document).ready(function(){
             prevEl: '#solutions_prev',
         },
         breakpoints: {
+            600:{
+                slidesPerView: 1.5,
+            },
+            1366:{
+                slidesPerView: 2.1,
+            },
             1680:{
                 slidesPerView: 2.5,
             },
@@ -132,10 +142,19 @@ $(document).ready(function(){
     })
 
     new Swiper('.feedback_slider',{
-        slidesPerView: 2,
+        slidesPerView: 1.2,
         spaceBetween: 20,
         centeredSlides: true,
         breakpoints: {
+            400:{
+                slidesPerView: 1.4,
+            },
+            600:{
+                slidesPerView: 2,
+            },
+            1025:{
+                slidesPerView: 2,
+            },
             1440:{
                 slidesPerView: 2.4,
             },
@@ -153,6 +172,20 @@ $(document).ready(function(){
     })
 
 
+
+    $('.burger_button').click(function(){
+        if( !$('.burger_button').hasClass('menu-active') ){
+            $(this).addClass('menu-active');
+            $('.video_play').addClass('disabled');
+            $('.burger_menu').fadeIn();
+
+        }
+    })
+    $('.burger_close_button').click(function(){
+        $('.burger_button').removeClass('menu-active');
+        $('.video_play').removeClass('disabled');
+        $('.burger_menu').fadeOut();
+    })
    
 
     
