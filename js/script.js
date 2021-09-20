@@ -96,7 +96,7 @@ $(document).ready(function(){
         e.preventDefault()
         $('.tabs_link').removeClass('active-link')
         $(this).addClass('active-link')
-        $('.tabs_content').fadeOut()
+        $('.tabs_content_img').fadeOut()
         setTimeout(() => {
             $( $(this).attr('data-tab') ).fadeIn()
         }, 300);
@@ -178,13 +178,14 @@ $(document).ready(function(){
             $(this).addClass('menu-active');
             $('.video_play').addClass('disabled');
             $('.burger_menu').fadeIn();
-
+            $('.select__list').addClass('burger_active_btn')
         }
     })
-    $('.burger_close_button').click(function(){
+    $('.burger_close_button, .burger_link').click(function(){
         $('.burger_button').removeClass('menu-active');
         $('.video_play').removeClass('disabled');
         $('.burger_menu').fadeOut();
+        $('.select__list').removeClass('burger_active_btn')
     })
    
 

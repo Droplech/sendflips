@@ -352,11 +352,19 @@ button{
     left: -4px;
     top: 26px;
 }
-
-.tabs_content{
-    display: none;
+.tabs_content_wrapper .img{
+    position: relative;
 }
-.tabs_content.tabs_content-active{
+.tabs_content_img{
+    display: none;
+    /* position: absolute;
+    top: 0;
+    left: -65px; */
+    
+    
+    
+}
+.tabs_content_img.tabs_content-active{
     display: block;
 }
 
@@ -870,7 +878,7 @@ button{
 
 
 
-.info_block{
+.advertising{
     /* margin-top: 150px; */
     padding-top: 150px;
     /* height: 800px; */
@@ -958,8 +966,8 @@ button{
 }
 
 
-.info_block_two{
-    margin-top: 100px;
+.advertising_two{
+    padding-top: 100px;
 }
 .program_setting_wrapper .button_tabs_items{
     display: none;
@@ -1024,7 +1032,7 @@ button{
     width: 14px;
     height: 14px;
     position: absolute;
-    right: 30px;
+    right: 25px;
     top: 33px;
 }
 .burger_close_button div{
@@ -1058,6 +1066,13 @@ button{
     .info_block_wrapper,
     .we_are_ready_wrapper{
         width: 100%;
+    }
+    .info_block_wrapper .text_wrapper{
+        margin-right: 100px;
+    }
+    .info_block_wrapper_two .text_wrapper{
+        margin-right: 0;
+        margin-left: 100px;
     }
 }
 
@@ -1249,8 +1264,8 @@ button{
         font-size: 14px;
     }
     .first_block .block_video .video_txt{
-        width: 312px;
-        left: 13px;
+        width: 100%;
+        left: 0;
     }
     .tabs_content_wrapper .title h2,
     .we_are_ready h2,
@@ -1410,6 +1425,20 @@ button{
     .tabs_link{
         height: auto;
     }
+    .navigate{
+        position: fixed;
+        width: 100%;
+        background-color: #242424;
+        z-index: 500;
+    }
+    .right_nav .select .select__list{
+        background-color: #242424;
+        top: 42px;
+    }
+    .right_nav .select .select__list.burger_active_btn{
+        top: 18px;
+    }
+    
 }
 
 
