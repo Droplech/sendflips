@@ -116,6 +116,26 @@ $(document).ready(function(){
         
     })
 
+
+    if(screen.width < 900 ){
+        $('.ready_linkTab').click(function(e){
+            e.preventDefault()
+            $('.ready_linkTab').removeClass('active-readyLink')
+            $(this).addClass('active-readyLink')
+            $('.pop_up_tabsContent').fadeIn()
+            $('.pop_up_bg').fadeIn()
+            $('.ready_tabs_content').removeClass('mob_tabContent-active')
+            $( $(this).attr('data-tab') ).addClass('mob_tabContent-active')
+            
+            
+        })
+        $('.close_pop_up, .pop_up_bg').click(function(){
+            $('.pop_up_tabsContent').fadeOut()
+            $('.pop_up_bg').fadeOut()
+            $('.ready_tabs_content').removeClass('mob_tabContent-active')
+        })
+    }
+
     new Swiper('.solutions_slider',{
         slidesPerView: 1.2,
         spaceBetween: 20,
@@ -188,6 +208,7 @@ $(document).ready(function(){
         $('.select__list').removeClass('burger_active_btn')
     })
    
+    
 
     
     
