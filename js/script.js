@@ -99,7 +99,7 @@ $(document).ready(function(){
         $('.tabs_content_img').fadeOut()
         setTimeout(() => {
             $( $(this).attr('data-tab') ).fadeIn()
-        }, 300);
+        }, 400);
         
         
     })
@@ -112,7 +112,7 @@ $(document).ready(function(){
 
         setTimeout(() => {
             $( $(this).attr('data-tab') ).fadeIn()
-        }, 300);
+        }, 400);
         
     })
 
