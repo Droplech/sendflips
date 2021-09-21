@@ -846,6 +846,7 @@ button{
 }
 .feedback_item .user{
     display: flex;
+    align-items: center;
     margin-top: 45px;
 }
 .feedback_item .user .name span{
@@ -1614,6 +1615,24 @@ button{
     .footer_item_list_mob ul  li:last-child{
         margin-left: 0;
         margin-top: 20px;
+    }
+    .feedback_item .txt p,
+    .feedback_item .user .name span,
+    .feedback_item .user .name p{
+        font-size: 14px;
+    }
+    .feedback_item .user .name p{
+        padding: 0;
+    }
+    .feedback_item .txt p{
+        padding: 0;
+        width: 100%;
+    }
+    .feedback_item:first-child{
+        border-left: 2px solid #DADADA;;
+    }
+    .feedback_slider_block{
+        padding-left: 20px;
     }
 }
 

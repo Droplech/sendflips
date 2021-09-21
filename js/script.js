@@ -133,7 +133,7 @@ $(document).ready(function(){
             $('.pop_up_tabsContent').fadeOut()
             $('.pop_up_bg').fadeOut()
             $('.ready_tabs_content').removeClass('mob_tabContent-active')
-            
+            $('.ready_linkTab').removeClass('active-readyLink')
         })
     }
 
@@ -163,15 +163,16 @@ $(document).ready(function(){
     })
 
     new Swiper('.feedback_slider',{
-        slidesPerView: 1.2,
+        slidesPerView: 1.4,
         spaceBetween: 20,
-        centeredSlides: true,
+        centeredSlides: false,
         breakpoints: {
             400:{
                 slidesPerView: 1.3,
             },
             600:{
                 slidesPerView: 2,
+                centeredSlides: true,
             },
             1025:{
                 slidesPerView: 2,
