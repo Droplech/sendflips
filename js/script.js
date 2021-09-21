@@ -96,10 +96,10 @@ $(document).ready(function(){
         e.preventDefault()
         $('.tabs_link').removeClass('active-link')
         $(this).addClass('active-link')
-        $('.tabs_content_img').fadeOut()
+        $('.tabs_content_img').fadeOut(100)
         setTimeout(() => {
             $( $(this).attr('data-tab') ).fadeIn()
-        }, 400);
+        }, 300);
         
         
     })
@@ -108,11 +108,11 @@ $(document).ready(function(){
         e.preventDefault()
         $('.ready_linkTab').removeClass('active-readyLink')
         $(this).addClass('active-readyLink')
-        $('.ready_tabs_content').fadeOut()
+        $('.ready_tabs_content').fadeOut(100)
 
         setTimeout(() => {
             $( $(this).attr('data-tab') ).fadeIn()
-        }, 400);
+        }, 300);
         
     })
 
@@ -167,7 +167,7 @@ $(document).ready(function(){
         centeredSlides: true,
         breakpoints: {
             400:{
-                slidesPerView: 1.4,
+                slidesPerView: 1.3,
             },
             600:{
                 slidesPerView: 2,

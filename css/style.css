@@ -706,9 +706,12 @@ button{
 }
 
 
-
+.ready_content_wrapper{
+    min-height: 750px;
+}
 .ready_tabs_content{
     display: none;
+    
 }
 
 .ready_tabs_content.tabs_content-active{
@@ -1130,6 +1133,9 @@ button{
 .mob_ready_tabs{
     display: none;
 }
+.footer_item_list_mob{
+    display: none;
+}
 @media screen and (max-width:1440px){
     .info_block_wrapper,
     .we_are_ready_wrapper{
@@ -1171,6 +1177,9 @@ button{
     .info_block_wrapper_two .text_wrapper .button{
         margin-left: 100px;
     }
+    .ready_content_wrapper {
+        min-height: 720px;
+    }
 }
 
 @media screen and (max-width:1280px){
@@ -1192,6 +1201,9 @@ button{
     .info_block_wrapper_two .txt{
         margin-right: 0;
         margin-left: 35px;
+    }
+    .ready_content_wrapper {
+        min-height: 670px;
     }
 }
 @media screen and (max-width:1025px){
@@ -1259,6 +1271,9 @@ button{
     .info_block_wrapper .txt{
         margin-right: 0;
         margin-left: 0;
+    }
+    .ready_content_wrapper {
+        min-height: 570px;
     }
 }
 
@@ -1329,6 +1344,30 @@ button{
     .info_block_wrapper_two .text_wrapper .button{
         margin-left: 0;
     }
+    .info_block_wrapper{
+        align-items: baseline;
+        padding: 0 20px;
+    }
+    .info_block_wrapper .img{
+        width: 100%;
+    }
+    .info_block_wrapper .txt{
+        width: 100%;
+    }
+    .tabs_link{
+        padding: 26px 34px 26px 41px;
+        height: auto;
+    }
+    .tabs_link p{
+        width: 100%;
+    }
+    .tabs_link.active-link::after{
+        top: 10%;
+        height: 170px;
+    }
+    .ready_content_wrapper {
+        min-height: auto;
+    }
 }
 
 @media screen and (max-width: 600px){
@@ -1364,6 +1403,7 @@ button{
     }
     .tabs_link h3{
         font-size: 20px;
+        line-height: 30px;
     }
     .tabs_link p{
         font-size: 14px;
@@ -1511,7 +1551,7 @@ button{
     }
     .right_nav .select .select__list{
         background-color: #242424;
-        top: 42px;
+        top: 38px;
     }
     .right_nav .select .select__list.burger_active_btn{
         top: 18px;
@@ -1532,6 +1572,47 @@ button{
     .pop_up_tabsContent{
         width: 312px;
 
+    }
+    .navigate_wrapper{
+        padding: 16px 0 16px 0;
+    }
+    .burger_close_button{
+        right: 25px;
+        top: 22px;
+    }
+    .burger_menu{
+        padding: 17px 17px;
+    }
+    .info_block_wrapper .txt h4{
+        font-size: 18px;
+    }
+    .info_block_wrapper .txt p{
+        width: 100%;
+    }
+    .questions_form{
+        margin-top: 60px;
+    }
+    .footer_item_list{
+        display: none;
+    }
+    .footer_item_list_mob{
+        display: block;
+    }
+    .footer_item_list_mob ul{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+   
+    .footer_item_list_mob ul > li + li{
+        margin-top: 0;
+        margin-left: 44px;
+       
+        
+    }
+    .footer_item_list_mob ul  li:last-child{
+        margin-left: 0;
+        margin-top: 20px;
     }
 }
 
