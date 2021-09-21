@@ -133,6 +133,7 @@ $(document).ready(function(){
             $('.pop_up_tabsContent').fadeOut()
             $('.pop_up_bg').fadeOut()
             $('.ready_tabs_content').removeClass('mob_tabContent-active')
+            
         })
     }
 

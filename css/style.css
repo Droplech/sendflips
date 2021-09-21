@@ -1439,6 +1439,7 @@ button{
     }
     .tabs_content_wrapper .img{
         height: auto;
+        min-height: 230px;
     }
     .we_are_ready,
     .ready_solutions,
