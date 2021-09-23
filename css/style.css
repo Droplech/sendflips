@@ -308,6 +308,7 @@ button{
 
 .tabs_content_wrapper .img img{
     width: 100%;
+    margin-left: -70px;
 }
 
 .program_setting_wrapper .button{
@@ -1275,6 +1276,9 @@ button{
     }
     .ready_content_wrapper {
         min-height: 570px;
+    }
+    .tabs_content_wrapper .img img{
+        margin-left: 0;
     }
 }
 
